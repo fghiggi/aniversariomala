@@ -1,0 +1,13 @@
+{
+    "name": "Aniversário Mala !!11!!",
+    "short_name": "M_A_L_A",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#2196F3",
+    "theme_color": "#2196F3",
+    "icons": [
+      {
+        "src": "homescreen.png"
+      }
+    ]
+  }
