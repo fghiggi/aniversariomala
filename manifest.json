@@ -1,13 +1,15 @@
 {
-    "name": "Aniversário Mala !!11!!",
-    "short_name": "M_A_L_A",
-    "start_url": ".",
-    "display": "standalone",
-    "background_color": "#2196F3",
-    "theme_color": "#2196F3",
-    "icons": [
-      {
-        "src": "homescreen.png"
-      }
-    ]
-  }
+  "short_name": "M_A_L_A",
+  "name": "Aniversário Mala !!11!!",
+  "icons": [
+    {
+      "src": "homescreen.png",
+      "sizes": "144x144 64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
