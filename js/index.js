@@ -3,38 +3,12 @@ let images = request()
     .catch(error => console.log(error));
 
 document.querySelector('h1').innerHTML = getMessage();
-document.addEventListener('keypress', eventsHandler);
-document.querySelector('h1').addEventListener('touchstart', eventsHandler);
-document.querySelector('button').addEventListener('click', function () {
-    request({
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json; charset=UTF-8' },
-        body: ['http://natv.ig.com.br/wp-content/uploads/2013/06/rita-cadillac6.jpg']
-    });
-});
 
 setInterval(function () {
     Array.from(document.getElementsByClassName('grid-item')).forEach(element => {
         element.style.backgroundImage = `url(${images[Math.floor(Math.random() * images.length)]})`;
     });
 }, 2500);
-
-function eventsHandler(e) {
-    let campoCor = document.querySelector('.addPhoto');
-
-    if (e.key === 'm') {
-        campoCor.style.display = 'inline-flex';
-    }
-    if (e.key === 'l') {
-        campoCor.style.display = 'none';
-    }
-    if (e.type == 'touchstart') {
-        campoCor.style.display = campoCor.style.display === 'none' ||
-            campoCor.style.display === ''
-            ? 'inline-flex'
-            : 'none';
-    }
-}
 
 function getMessage() {
     const currentDate = getCurrentDate();
