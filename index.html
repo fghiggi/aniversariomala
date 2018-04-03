@@ -5,123 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name=theme-color content=#000000>
     <link rel="manifest" href="manifest.json">
+    <link type="text/css" rel="stylesheet" href="./css/style.css" />
     <title>Aniverário do MALA!!!111!!</title>
 </head>
 
 <body>
-    <h1></h1>
+    <h1>?</h1>
+    <div class="addPhoto">
+        <input class="txt" type="text" placeholder="link da foto do mala" name="name">
+        <button id="ola" class="btn">Enviar</button>
+    </div>
     <div class="grid-container">
         <div class="grid-item" id="img1"></div>
         <div class="grid-item" id="img2"></div>
         <div class="grid-item" id="img3"></div>
     </div>
 </body>
-<script>
-    const images = [
-        'https://image.ibb.co/jin2RS/mala2.jpg',
-        'https://image.ibb.co/dX8gLn/mala1.jpg',
-        'https://scontent.fpoa2-1.fna.fbcdn.net/v/t31.0-8/15272280_1163908807028232_1483003821218064206_o.jpg?oh=22185d2ea07a77e1f0686ad3bb0f2197&oe=5B0D659F',
-        'https://scontent.fpoa2-1.fna.fbcdn.net/v/t1.0-9/11855695_861371390615310_5743194389075271875_n.jpg?oh=2a986550cb2203073ace7db7fa9d9644&oe=5B23E034',
-        'https://image.ibb.co/mRLQRS/FB_IMG_1500000840842.jpg',
-        'https://image.ibb.co/iMGFRS/FB_IMG_1516052815291_1.jpg',
-        'https://image.ibb.co/mvAZmS/IMG_20151218_214140775.jpg',
-        'https://image.ibb.co/g8GnRS/mala3.jpg',
-        'https://scontent.fpoa2-1.fna.fbcdn.net/v/t1.0-9/14908188_1135563966529383_1026898444394597942_n.jpg?oh=59a5d5a46d75559b9e428fb4a9c7d845&oe=5B0A05B0',
-        'https://image.ibb.co/hOoTY7/mala4.jpg',
-        'https://image.ibb.co/iGS0fn/mala5.jpg',
-        'https://image.ibb.co/kXLE6S/FB_IMG_1518465467798.jpg',
-        'https://image.ibb.co/ennu6S/FB_IMG_1518465504274.jpg',
-        'https://image.ibb.co/m6Jj6S/FB_IMG_1518465512618.jpg',
-        'https://image.ibb.co/eSvmLn/FB_IMG_1518465546174.jpg',
-        'https://image.ibb.co/cjyO0n/mala6.jpg',
-        'https://image.ibb.co/fZQp6S/FB_IMG_1518465882133.jpg',
-        'https://image.ibb.co/gmq0D7/FB_IMG_1518466200519_1.jpg',
-        'https://image.ibb.co/b1ogLn/FB_IMG_1518466245480_1.jpg',
-        'https://image.ibb.co/dSZhRS/FB_IMG_1518466229972_1.jpg',
-        'https://image.ibb.co/cBwU6S/FB_IMG_1518466175612_1.jpg',
-        'https://image.ibb.co/fHjGQx/1.jpg',
-        'https://image.ibb.co/dDR7Xc/2.jpg',
-        'https://image.ibb.co/nJVHXc/3.jpg'
-    ];
 
-    onload = function () {
-        updateBackgroundImage();
-        const daysUntilDate = Math.floor((new Date("2018-04-13") - getCurrentDate()) / (1000 * 60 * 60 * 24));
-        document.getElementsByTagName("h1")[0].innerHTML = daysUntilDate;
-
-        setInterval(function () {
-            updateBackgroundImage();
-        }, 5000);
-    }
-
-    updateBackgroundImage = function () {
-        document.getElementById("img1").style.backgroundImage = `url(${images[Math.floor(Math.random() * images.length)]})`;
-        document.getElementById("img2").style.backgroundImage = `url(${images[Math.floor(Math.random() * images.length)]})`;
-        document.getElementById("img3").style.backgroundImage = `url(${images[Math.floor(Math.random() * images.length)]})`;
-    }
-
-    getCurrentDate = function () {
-        const date = new Date();
-        let day = date.getDate();
-        let month = date.getMonth() + 1;
-
-        if (day < 10) {
-            day = '0' + day
-        }
-
-        if (month < 10) {
-            month = '0' + month
-        }
-
-        return Date.parse(`${date.getFullYear()}-${month}-${day}`);
-    };
-</script>
-<style>
-    body {
-        margin: 0%;
-    }
-
-    h1 {
-        position: fixed;
-        left: 50%;
-        top: 10%;
-        transform: translate(-50%, -50%);
-        font-size: 60vh;
-        color: white;
-    }
-
-    .grid-container {
-        display: grid;
-        grid-template-columns: auto auto auto;
-        background-color: #2196F3;
-        width: 100vw;
-        height: 100vh;
-    }
-
-    .grid-item {
-        background-color: rgba(255, 255, 255, 0.8);
-        background-repeat: no-repeat;
-        background-size: cover;
-        font-size: 30px;
-        text-align: center;
-    }
-
-    @media screen and (max-width: 600px) {
-        .grid-container {
-            grid-template-columns: auto;
-        }
-
-        #img2,
-        #img3 {
-            visibility: hidden;
-            clear: both;
-            float: left;
-            margin: 10px auto 5px 20px;
-            width: 28%;
-            display: none;
-        }
-    }
-</style>
+<script type="text/javascript" src="./js/index.js"></script>
 
 </html>
